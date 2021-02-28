@@ -3,11 +3,10 @@
 //importing
 const express = require("express");
 const cors = require("cors");
-const passport = require("passport");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv");
 dotenv.config();
-const pass = require("./passport");
+const passport = require("./passport");
 const database = require("./database");
 
 //fetching db and routers

@@ -63,7 +63,7 @@ passport.use(
         {
             clientID: process.env.GOOGLE_ID,
             clientSecret: process.env.GOOGLE_SECRET,
-            callbackURL: "http://localhost:9001/authors/3rdParty/google/googleRedirect",
+            callbackURL: "http://localhost:9001/users/googleRedirect",
         },
         async (accessToken, refreshToken, profile, done) => {
             const newUser = {
@@ -109,3 +109,5 @@ passport.serializeUser(function (user, done) {
 passport.deserializeUser(function (obj, done) {
     done(null, obj);
 });
+
+module.exports = passport
